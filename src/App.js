@@ -6,7 +6,7 @@ import IncomExoences from "./components/IncomeExpences";
 import TransactionList from "./components/TransactionList";
 import Addtransaction from "./components/AddTransaction";
 
-import { GrobalProvider } from "./context/GlobalState";
+import { GlobalProvider } from "./context/GlobalState";
 
 import "./App.css";
 
