@@ -20,8 +20,15 @@ export const GlobalProvider = ({ children }) => {
   // Action
   function deleteTransaction(id) {
     dispatch({
-      type: "DELETE_TRANSACRION",
+      type: "DELETE_TRANSACTION",
       payload: id
+    });
+  }
+
+  function addTransaction(transaction) {
+    dispatch({
+      type: "ADD_TRANSACTION",
+      payload: transaction
     });
   }
 
@@ -29,7 +36,8 @@ export const GlobalProvider = ({ children }) => {
     <GlobalContext.Provider
       value={{
         transactions: state.transactions,
-        deleteTransaction
+        deleteTransaction,
+        addTransaction
       }}
     >
       {children}
